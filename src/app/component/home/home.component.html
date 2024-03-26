@@ -1,0 +1,80 @@
+<div class="card-container">
+  <div class="card" *ngFor="let box of boxes" style="background-color: rgba(255, 255, 255, 0);">
+    <div class="card-body">
+      <!-- Rectangle arrondi vert -->
+      <div class="green-rectangle p-1">
+        <!-- Image de la boîte -->
+        <img [src]="'https://ldv-sushi-api.azurewebsites.net/api/image' + box.image" class="rounded mx-auto d-block"
+          alt="Image de la boîte">
+      </div>
+      <!-- Nom de la boîte -->
+      <h5 class="card-title text-center">{{ box.nom }}
+        <input (click)="onDetails(box)" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" value="..." class="small-button" />
+
+
+
+      </h5>
+      <!-- Prix de la boîte -->
+      <h6 class="card-subtitle mb-2 text-muted text-center">{{ box.prix }}€
+
+        <input type="button" value="-" (click)="reduireAupanier(box!)"/>
+        
+        <span style="margin: 0 10px" > </span>
+        <input type="button" value="+"(click)="ajouterAuPanier(box!)" />
+      
+      </h6>
+
+    </div>
+  </div>
+
+
+  <!-- Modal commun à toutes les boxes -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="col-9">
+          <h5 class="modal-title" id="exampleModalLabel">{{boxDetail?.nom}}</h5>
+          
+        </div>
+
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12 text-center">
+              <img [src]="'https://ldv-sushi-api.azurewebsites.net/api/image' + boxDetail?.image" alt="Image" class="img-fluid">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <p>{{boxDetail?.pieces}} pièces</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6">
+              <p class="flavor-heading">Saveurs :</p>
+              <ul>
+                <li *ngFor="let saveur of boxDetail?.saveurs ?? []">{{ saveur }}</li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <p class="food-heading">Aliments :</p>
+              <ul>
+                <li *ngFor="let aliment of boxDetail?.aliments"> {{ aliment.nom }}  </li>            
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="ajouterAuPanier(boxDetail!)">Ajouter au panier</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>

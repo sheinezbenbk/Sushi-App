@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-image: url('/assets/img/Maquette.png');
+    background-size: cover; /* Redimensionne l'image pour qu'elle s'adapte à l'écran sans déformer son ratio */
+    background-repeat: no-repeat; /* Évite la répétition de l'image */
+  }
+  

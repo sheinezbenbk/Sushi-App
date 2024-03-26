@@ -1,0 +1,49 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    /* Si vous voulez que l'image occupe toute la hauteur de l'écran */
+    height: 200px;
+}
+
+.container img {
+    max-width: 1000%;
+    /* Pour s'assurer que l'image ne dépasse pas la largeur de son conteneur */
+    max-height: 1000%;
+    /* Pour s'assurer que l'image ne dépasse pas la hauteur de son conteneur */
+}
+
+
+.num {
+    height: 20px; /* Hauteur de votre conteneur */
+    display: flex;
+    justify-content: center; /* Alignement horizontal au centre */
+    align-items: center; /* Alignement vertical au centre */
+
+
+}
+
+.num {
+    text-align: center;
+    /* Pour aligner le texte horizontalement au centre */
+    font-family: 'Poppins', sans-serif; /* Utilisation de la police Poppins */
+    font-size: 24px; 
+      
+}
+
+.commande{
+    height: 100px; /* Hauteur de votre conteneur */
+    display: flex;
+    justify-content: center; /* Alignement horizontal au centre */
+    align-items: center; /* Alignement vertical au centre */
+}
+
+.commande{
+    font-family: 'ABCFavoritVariable', 'Roboto', Arial, sans-serif, serif;
+    font-size: 15px;
+}

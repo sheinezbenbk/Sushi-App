@@ -1,0 +1,52 @@
+header {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+#truc{
+  background-color: #BCD9AE !important;
+  background-color: #BCD9AE !important;
+}
+
+#mon_panier {
+    text-transform: uppercase;
+    font-family: 'Karma', sans-serif;
+    color: #7E5649;
+    font-size: 32px;
+    justify-content: center
+
+
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #BCD9AE;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 200px; /* Espacement intérieur plus petit */
+    width: 70%; /* Largeur de la carte */
+   
+  }
+  
+  .card-content {
+    color: #000;
+    text-align: center; /* Centrer le contenu */
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+  

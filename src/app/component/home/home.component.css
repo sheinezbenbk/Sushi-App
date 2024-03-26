@@ -1,0 +1,84 @@
+
+
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .card {
+    flex: 0 0 calc(33.33% - 20px); /* Pour que chaque carte occupe environ un tiers de la largeur */
+  margin: 10px;
+  position: relative; /* Ajoutez une position relative pour les enfants absolus */
+
+  }
+  
+  .image-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #BCD9AE;
+    border-radius: 10px;
+    z-index: -1;
+  }
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .green-rectangle {
+ /*    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px; /* ajustez la largeur selon vos besoins */
+    /*height: 50px; /* ajustez la hauteur selon vos besoins */ 
+    background-color: #BCD9AE; /* couleur verte */
+    border-radius: 10px; /* coins arrondis */
+    z-index: -1; /* placez-le en arrière-plan */
+  }
+
+/*   .card img {
+    opacity: 0.9;
+  } */
+
+  .card-title {
+    font-family: "Antic";
+    text-transform: uppercase;
+    /* Autres styles pour le nom de la boîte */
+  }
+  
+  .card-subtitle {
+    font-family: "Cormorant Infant", serif;
+    /* Autres styles pour le prix de la boîte */
+  }
+
+  .small-button {
+    width: 20px; /* Largeur du bouton */
+    height: 20px; /* Hauteur du bouton */
+    font-size: 10px; /* Taille de la police */
+  }
+
+  .modal-title {
+    font-family: 'Antic'; /* Utilisation de la police Antic */
+   
+  }
+
+  .modal-content {
+    background-color: #BCD9AE; /* Couleur de fond */
+  }
+  
+
+  .flavor-heading,
+
+  
+.food-heading {
+  font-family: 'antonio'; /* Remplacez 'Votre Police' par le nom de la police que vous souhaitez utiliser */
+}
+
+ 
+  

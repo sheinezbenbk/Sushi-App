@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Karma&display=swap" rel="stylesheet">
+
+</head>
+<header>
+    <div id="mon_panier">Mon Panier</div>
+</header>
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+<div class="card mb-3" style="border-radius: 10px;height: 600px; overflow-y: auto;" >
+    
+    <div >
+        <table >
+            <tbody>
+                <tr *ngFor="let ligne of monPanier">
+                    <td>
+                        <img [src]="'http://localhost:8080/api/image/' + ligne.uneBox.image" alt="Image" class="img-fluid">{{ligne.uneBox.image}}
+                    </td>
+                    <td> <input type="button" value="-" (click)="reduireQuantite(ligne.uneBox)" /> </td>
+                    <td> <span></span>{{ligne.quantite | number: '1.2-2'}} </td>
+                    <td> <input type="button" value="+" (click)="ajoutQuantite(ligne.uneBox)" /> </td>
+                    <td> <span></span>{{ligne.uneBox.prix * ligne.quantite}} €</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer text-right">
+        Total : {{total() | number:'1.2-2'}}
+    </div>
+</div>
+</div>
+
+
+    <div class="card-body d-flex justify-content-center align-items-center" style="height: 100%;" > 
+      <a id="truc" href="/valide" class="btn btn-success">Valider Panier</a>
+    </div>
+ 
+  
+
+
